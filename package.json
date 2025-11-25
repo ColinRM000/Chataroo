@@ -1,6 +1,6 @@
 {
   "name": "Chataroo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A desktop chat client for Kick streaming platform",
   "main": "dist/main/index.js",
   "author": "Chataroo",

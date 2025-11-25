@@ -15,7 +15,7 @@ import { SettingsStorage } from './settings/SettingsStorage'
 app.setName('Chataroo')
 
 autoUpdater.autoDownload = false
-autoUpdater.autoInstallOnAppQuit = true
+autoUpdater.autoInstallOnAppQuit = false
 
 function createWindow() {
   const resourcePath = !process.env.NODE_ENV || process.env.NODE_ENV === 'production'
@@ -455,7 +455,7 @@ function setupIpcHandlers() {
   })
 
   ipcMain.handle('update:install', () => {
-    autoUpdater.quitAndInstall()
+    autoUpdater.quitAndInstall(false, true)
   })
 }
 
