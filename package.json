@@ -1,9 +1,9 @@
 {
-  "name": "chataroo",
-  "version": "1.0.0",
+  "name": "Chataroo",
+  "version": "1.0.1",
   "description": "A desktop chat client for Kick streaming platform",
   "main": "dist/main/index.js",
-  "author": "ColinRM000",
+  "author": "Chataroo",
   "license": "MIT",
   "homepage": "https://github.com/ColinRM000/chataroo",
   "scripts": {
@@ -53,7 +53,7 @@
     "publish": {
       "provider": "github",
       "owner": "ColinRM000",
-      "repo": "chataroo"
+      "repo": "Chataroo"
     },
     "win": {
       "icon": "resources/Chataroo.ico",
@@ -89,6 +89,10 @@
         "from": "resources/",
         "to": "resources/",
         "filter": ["**/*"]
+      },
+      {
+        "from": "GlobalEmotes.json",
+        "to": "GlobalEmotes.json"
       }
     ]
   }

@@ -71,7 +71,10 @@ export class EmoteService {
     }
 
     try {
-      const globalEmotesPath = path.join(process.cwd(), 'GlobalEmotes.json')
+      const isDev = process.env.NODE_ENV === 'development'
+      const globalEmotesPath = isDev
+        ? path.join(process.cwd(), 'GlobalEmotes.json')
+        : path.join(process.resourcesPath, 'GlobalEmotes.json')
 
       if (!fs.existsSync(globalEmotesPath)) {
         console.error('[EmoteService] GlobalEmotes.json not found at:', globalEmotesPath)
