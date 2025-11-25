@@ -1,0 +1,95 @@
+{
+  "name": "chataroo",
+  "version": "1.0.0",
+  "description": "A desktop chat client for Kick streaming platform",
+  "main": "dist/main/index.js",
+  "author": "ColinRM000",
+  "license": "MIT",
+  "homepage": "https://github.com/ColinRM000/chataroo",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "package": "electron-builder"
+  },
+  "keywords": [
+    "kick",
+    "chat",
+    "streaming",
+    "electron"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.4",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "electron": "^39.1.2",
+    "electron-builder": "^26.0.12",
+    "electron-vite": "^4.0.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "electron-store": "^11.0.2",
+    "electron-updater": "^6.1.7",
+    "pusher-js": "^8.4.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "build": {
+    "appId": "com.chataroo.app",
+    "productName": "Chataroo",
+    "icon": "resources/Chataroo.ico",
+    "electronDist": "node_modules/electron/dist",
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "resources/Chataroo.ico",
+      "uninstallerIcon": "resources/Chataroo.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "ColinRM000",
+      "repo": "chataroo"
+    },
+    "win": {
+      "icon": "resources/Chataroo.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "signAndEditExecutable": true,
+      "verifyUpdateCodeSignature": false
+    },
+    "mac": {
+      "icon": "resources/Chataroo.png",
+      "target": [
+        "dmg"
+      ],
+      "identity": null
+    },
+    "linux": {
+      "icon": "resources/Chataroo.png",
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "files": [
+      "dist/**/*",
+      "resources/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/",
+        "to": "resources/",
+        "filter": ["**/*"]
+      }
+    ]
+  }
+}
