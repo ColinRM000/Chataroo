@@ -1,6 +1,6 @@
 # Chataroo 🦘
 
-A desktop chat client for Kick streaming platform, inspired by Chatterino.
+A desktop chat client for the streaming platform Kick, inspired by Chatterino.
 
 ## Features
 
@@ -8,7 +8,7 @@ A desktop chat client for Kick streaming platform, inspired by Chatterino.
 - 💬 Multi-channel support with tabs
 - 🎨 Clean, dark-themed UI
 - 🔨 Moderation tools
-- 😀 Emotes and badges support
+- 😀 Emotes and more
 - 📱 Cross-platform (Windows, Mac, Linux)
 
 ## Development
